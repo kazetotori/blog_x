@@ -1,0 +1,76 @@
+/*
+    main-color: #E4304E
+*/
+
+.mb-sign-logo {
+    color: #E4304E;
+    font-weight: lighter;
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.mb-sign-form {
+    margin-top: 40px;
+    background: transparent;
+}
+
+.mb-sign-form>.am-input-group {
+    padding: 0 30px;
+}
+
+.mb-sign-form>.am-input-group input {
+    font-size: 12px;
+}
+
+.mb-sign-form>.am-input-group+.am-input-group>input {
+    border-top: none;
+}
+
+.mb-sign-form input {
+    padding-left: 15px;
+}
+
+.mb-sign-submit,
+.mb-sign-submit:focus,
+.mb-sign-submit:active {
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    margin-top: 80px;
+    outline: none;
+    font-size: 12px;
+}
+
+.mb-sign-hd {
+    padding: 5px;
+}
+
+.mb-sign-hd,
+.mb-sign-hd a {
+    color: #E4304E;
+    font-size: 12px
+}
+
+.mb-sign-hd>a:hover {
+    color: rgb(233, 21, 60)
+}
+
+@media(max-width:968px) {
+    body {
+        background: #FFF;
+    }
+    .mb-sign-form>.am-input-group {
+        padding: 0;
+    }
+}
+
+#errMsgContainer {
+    color: rgb(218, 29, 60);
+    border-color: #E4304E;
+    font-size: 12px;
+    transform: translateX(30px)
+}
+
+#errMsg {
+    padding: 10px;
+}

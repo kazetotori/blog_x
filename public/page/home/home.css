@@ -1,0 +1,68 @@
+.topbar {
+    border-left: 3px solid #E4304E;
+    background: #FFF;
+}
+
+.mb-home-main {
+    margin-top: 20px;
+}
+
+.mb-home-sidebar {
+    border-right: 1px solid #D9D9D9;
+}
+
+.mb-home-menu {
+    margin-top: 20px;
+    height: 80%;
+}
+
+.mb-home-menu .am-active {
+    background: #EEE;
+}
+
+.mb-home-menu a {
+    font-size: 12px;
+}
+
+.mb-home-menu>li {
+    width: auto;
+}
+
+.mb-home-menu-logo {
+    border-left: 3px solid #E4304E;
+    background: #EEE;
+}
+
+.mb-home-main {
+    border-right: 1px solid #D9D9D9;
+}
+
+.mb-home-blog-list,
+.mb-home-blog-list>li {
+    background: #EEE;
+}
+
+.mb-home-blog-list>li:hover {
+    background: #F5F5F5;
+}
+
+.mb-home-blog-list>li {
+    border: none;
+    font-size: 12px;
+    height: 30px;
+    padding-top: 6px;
+}
+
+.mb-home-blog-list-title {
+    overflow: hidden;
+}
+
+.mb-home-blog-list-title>a,
+.mb-home-blog-list-title>a:hover {
+    font-size: 12px;
+    color: #E4304E;
+}
+
+.mb-home-blog-list-title>a:hover {
+    color: #EE546E;
+}

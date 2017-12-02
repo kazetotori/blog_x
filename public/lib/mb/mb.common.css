@@ -1,0 +1,36 @@
+.mb-full-screen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: scroll;
+}
+
+.mb-full-height {
+    height: 100%;
+}
+
+.mb-full-width {
+    width: 100%;
+}
+
+.mb-bgcolor-main {
+    background: #E4304E;
+}
+
+.mb-color-main {
+    color: #E4304E;
+}
+
+.mb-color-default {
+    color: #888;
+}
+
+.mb-layout {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,33 @@
+main.am-g
+    .am-u-md-offset-3.am-u-md-6
+        .am-g
+            .am-u-md-12.am-text-center
+                img.mb-aboutme-headimg(src="#{blogUser.headurl}")
+            ul.am-md-12.am-nav.mb-aboutme-infolist
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 昵称：
+                    .am-u-md-6.am-u-end: =blogUser.nickname
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 性别：
+                    .am-u-md-6.am-u-end: =blogUser.sex
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 年龄：
+                    .am-u-md-6.am-u-end: =blogUser.age 
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 生日：
+                    .am-u-md-6.am-u-end: =blogUser.birthday
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 星座：
+                    .am-u-md-6.am-u-end: =blogUser.starname
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 电话：
+                    .am-u-md-6.am-u-end: =blogUser.phone
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 邮箱：
+                    .am-u-md-6.am-u-end: =blogUser.email
+                li.am-g
+                    .am-u-md-offset-4.am-u-md-2.am-text-right.mb-color-main 个人说明：
+                    .am-u-md-6.am-u-end: =blogUser.introduce||'-'
+                li.am-g.am-text-center
+                    a.mb-color-main(href="/index/#{blogUser.username}") >>进入主页
+                    

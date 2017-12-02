@@ -1,0 +1,62 @@
+style.
+    .mb-index-main-blogitem-container{
+        margin-left:20px;
+    }
+    .mb-index-main-blogitem-title {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .mb-index-main-blogitem-title>a {
+        color: #E4304E;
+    }
+
+    .mb-index-main-blogitem-preview {
+        font-size: 12px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+
+    .mb-index-main-blogitem-preview>* {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .mb-index-main-blogitem-readall {
+        margin-top: 10px;
+    }
+
+    .mb-index-main-blogitem-readall>a:hover {
+        text-decoration: underline;
+    }
+
+    .mb-index-main-blogitem-readall>a {
+        color: #E4304E;
+        font-size: 12px;
+    }
+
+main.am-container(style="background:#FFF")
+
+    .am-u-md-9(style="margin:0 0 2px -18px;border:1px solid #D9D9D9;border-top:none;border-bottom:0;min-height:300px;padding:0 10px")
+        ul.am-list.mb-index-main-blogitem-container
+            - if(blogList.length===0){
+                div
+                    .am-text-center(style="margin:40px auto 10px auto"): i.am-icon-meh-o(style="font-size:50px")
+                    .am-text-center(style="font-size:14px") 该博主很懒，并没有写过博客...
+            - } else {
+                - for(let i = 0; i < blogList.length; i++){
+                    - let blog = blogList[i];
+                    - let blogReadAllUrl = blogUser.indexUrl + '/blog?blogid=' + blog.blogid;
+                    li(blogid="#{blog.blogid}")
+                        h2.am-text-fl.mb-index-main-blogitem-title: a(href="#{blogReadAllUrl}"): =blog.title
+                        .mb-index-main-blogitem-preview:  =blog.preview
+                        .mb-index-main-blogitem-readall: a(href="#{blogReadAllUrl}") >>阅读全文
+                        include item_operate_group
+                - } 
+            - }
+        .am-text-center#bottomLoading(data-am-scrollspy="{animation: 'fade'}" style="margin-top:30px;border-bottom:1px solid #D9D9D9;padding-bottom:20px")
+            i.am-icon-spinner.am-icon-pulse
+    
+    include sidebar
+        
+

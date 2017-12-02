@@ -1,0 +1,25 @@
+link(href="/public/page/index/topbar.css", rel="stylesheet")
+header
+    .header-layout
+    #topbar.am-g.am-text-center    
+
+        - var idxUrl=backUrl;
+        ul.am-nav.am-nav-pills.am-text-center.am-u-md-4
+            li: a(href="javascript:void(0)") 
+                span.mb-color-main May
+                span.mb-color-default Light
+            li: a(href="/square") 广场
+            li: a(href="/whatsnew") 动态
+            li: a(href="#{signInfo.signStatus===0? '/index/'+signInfo.username:'/signin/?back='+ idxUrl}") 我的主页
+
+        div.am-u-offset-4.am-u-md-4(style="padding-top:7px")
+            if (signInfo.signStatus!==0)
+                a.am-fr(href="/signin/?back=#{idxUrl}")
+                    i.am-icon-user
+            else
+                span.mb-index-header-signed-welcome.am-fr 欢迎您，
+                    a(href="/home"): =signInfo.username
+                    a(href="/user/signout/?back=#{idxUrl}")
+                        i.am-icon-sign-out
+
+    div(style="margin-top:40px")

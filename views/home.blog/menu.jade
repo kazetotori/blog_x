@@ -1,0 +1,24 @@
+.am-g.mb-color-main.mb-home-menu(data-am-sticky="{top:30}")
+    ul.am-nav.am-text-center
+        li.mb-home-menu-logo: a
+            span.mb-color-main May
+            span.mb-color-default Light
+        li: a.mb-color-main(class="#{navInfo.mainNavName==='blog'?'am-active':''}" href="/home/blog")
+            .mb-color-main 博客管理
+            .mb-color-default &nbsp;Blogs
+        li: a.mb-color-main(class="#{navInfo.mainNavName==='class'?'am-active':''}" href="/home/class")
+            .mb-color-main 分类管理
+            .mb-color-default &nbsp;Classes
+        li: a.mb-color-main(class="#{navInfo.mainNavName==='friends'?'am-active':''}" href="/home/firends")
+            .mb-color-main 好友管理
+            .mb-color-default &nbsp;Friends
+        li: a.mb-color-main(class="#{navInfo.mainNavName==='info'?'am-active':''}" href="/home/info")
+            .mb-color-main 个人信息
+            .mb-color-default &nbsp;Info
+        li: a.mb-color-main(class="#{navInfo.mainNavName==='Messages'?'am-active':''}" href="/home/message")
+            .mb-color-main 消息
+            .mb-color-default &nbsp;Messages
+        li: a.mb-color-main(href="/index/#{signInfo.username}")
+            .mb-color-main 返回
+            .mb-color-default &nbsp;Return
+        

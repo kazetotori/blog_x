@@ -1,0 +1,33 @@
+.am-u-md-3(style="border-top:1px solid #D9D9D9")
+    .am-text-center(style="padding:40px 0 10px 0; border-bottom:1px solid #D9D9D9;")
+        a(href="#{blogUser.indexUrl}/aboutme")
+            img(src="#{blogUser.headurl}" style="width:80px;height80px;border:1px solid #D9D9D9;border-radius:100px")
+
+    .am-g.am-text-center(style="font-size:12px;margin-top:10px;padding-bottom:10px")
+        .am-u-md-4(style="border-right:1px solid #D9D9D9")
+            div(style="color:#E4304E;") 粉丝
+            #fanCount: =blogUser.fanCount
+        .am-u-md-4(style="border-right:1px solid #D9D9D9")
+            div(style="color:#E4304E;") 关注
+            div: =blogUser.focusCount
+        .am-u-md-4
+            div(style="color:#E4304E;") 访问
+            div: =blogUser.visitedTimes
+        div(data-am-sticky="{top:50}")
+            .am-u-md-12(style="border:1px solid #D9D9D9;border-right:none;border-left:none;margin-top:10px;padding:20px")
+                div: a(id="focusBloger" href="javascript:void(0)" style="color:#E4304E")
+                    - if (ship.focused) {
+                        i.am-icon-heart
+                        span &nbsp;已关注
+                    - } else {
+                        i.am-icon-heart-o 
+                        span &nbsp;加关注
+                    - }
+            
+            .am-u-md-12.am-text-left(style="margin-top:20px")
+                h3(style="color:#E4304E;margin:0") 最受欢迎
+                #readTimesTopList(style="border-bottom:1px solid #D9D9D9;")
+                    .am-text-center: i.am-icon-spinner.am-icon-pulse
+                h3(style="color:#E4304E;margin:0;margin-top:20px") 评论最多
+                #replyTimesTopList(style="border-bottom:1px solid #D9D9D9;padding:10px 0 0 0")
+                    .am-text-center: i.am-icon-spinner.am-icon-pulse

@@ -1,0 +1,27 @@
+style.
+    .mb-index-main-blogitem-operate-group {
+        margin: 0 0 0 -10px;
+    }
+
+    .mb-index-main-blogitem-operate-group a {
+        font-size: 12px;
+    
+
+
+ul.am-nav.am-nav-pills.mb-index-main-blogitem-operate-group
+    li: a.mb-index-main-blogitem-operate-like(href="javascript:void(0)")
+        i(class="am-icon-thumbs-#{blog.liked?'':'o-'}up")
+        span (#{blog.like_times})
+    li: a.mb-index-main-blogitem-operate-share(href="javascript:void(0)")
+        i(class="am-icon-star#{blog.shared?'':'-o'}")
+        span (#{blog.share_times})
+    li: a.mb-index-main-blogitem-operate-trans(href="javascript:void(0)")
+        i.am-icon-share-square-o
+        span (#{blog.trans_times})
+    li(style="float:right;color:#999;font-size:12px")
+        i.am-icon-eye
+        span (#{blog.read_times}) &nbsp;
+        i.am-icon-pencil-square-o
+        span (#{blog.reply_times}) &nbsp;
+        i.am-icon-clock-o
+        span #{blog.u_time} &nbsp;

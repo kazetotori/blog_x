@@ -1,0 +1,28 @@
+
+.am-container.am-index-nav(style="padding:25px 0;")
+    .am-u-md-12
+        h1.am-u-md-12
+            a(href="#{blogUser.indexUrl}" style="font-weight:lighter;font-size:30px;color:#E4304E")
+                - var blogUnameLen = blogUser.nickname.length;
+                - var sliceIndex = blogUnameLen > 2? blogUnameLen - 2 : 1;
+                - var blogUnamePre = blogUser.nickname.slice(0, sliceIndex);
+                - var blogUnameBack = blogUser.nickname.slice(sliceIndex);
+                span: =blogUnamePre 
+                span(style="color:#333;margin-left:10px"): =blogUnameBack
+                
+        .am-u-md-12(style="margin-top:-20px;")
+            a#localUrl(href="#{blogUser.indexUrl}" style="text-decoration:underline;color:#888") 
+        div
+            ul.am-nav.am-nav-pills.mb-nav-container
+                li: a(href="#{blogUser.indexUrl}") 首页
+                li: a(href="#{blogUser.indexUrl}/bloglist") 博客列表
+                li: a(href="#{blogUser.indexUrl}/aboutme") 关于我
+
+    
+script.
+    (function () {
+        "use strict";
+        var eleLocalUrl =  document.getElementById('localUrl');
+        eleLocalUrl.innerHTML = 'http://' + window.location.host + eleLocalUrl.getAttribute('href').replace(/\\/g, '/');        
+    }())
+

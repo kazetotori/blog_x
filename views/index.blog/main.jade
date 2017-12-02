@@ -1,0 +1,41 @@
+style.
+    .mb-blog-content{
+        font-size:13px;
+    }
+main.am-container(style="background:#FFF;")
+    .am-u-md-9(style="margin:0 0 2px -18px;border:1px solid #D9D9D9;border-top:1px solid #D9D9D9;border-bottom:0;min-height:300px;padding:0 10px")
+        h1.am-text-center(style="margin:0 auto;width:70%;color:#E4304E;padding:40px 0 30px 0;border-bottom:1px solid #D9D9D9"): =blog.title
+        article.mb-blog-content(style="border-bottom:1px solid #D9D9D9;min-height: 300px" )
+            div(style="margin:10px 20px 0px 20px;"): !=blog.content
+
+        div(style="padding:0 20px" blogid="#{blog.blogid}")
+            include ../index/item_operate_group
+        
+
+        div(style="font-size:12px;padding:20px;color:#666")
+            div 上一篇：
+                - if (blog.pre) {
+                        a(href="#{blogUser.indexUrl}/blog?blogid=#{blog.pre.blogid}" style="color:#E4304E"): =blog.pre.title
+                - } else {
+                    span 没有了
+                - }
+            div 下一篇：
+                - if (blog.next) {
+                        a(href="#{blogUser.indexUrl}/blog?blogid=#{blog.next.blogid}" style="color:#E4304E"): =blog.next.title
+                - } else {
+                    span 没有了
+                - }
+            div 创建时间：
+                =blog.c_time
+            div 修改时间：
+                =blog.u_time
+            h3(style="border-top:1px solid #D9D9D9;padding-top:10px;color:#E4304E") 点赞列表
+                span#likedTimes
+            #likeUsers
+            h3(style="border-top:1px solid #D9D9D9;padding-top:10px;color:#E4304E") 评论列表
+                span#replyTimes
+            #replyList
+
+
+
+    include ../index/sidebar

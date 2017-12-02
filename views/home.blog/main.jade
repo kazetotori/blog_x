@@ -1,0 +1,105 @@
+.am-g.mb-full-height
+    .am-u-md-offset-1.am-u-md-1.mb-home-sidebar.mb-full-height: include menu
+    .am-u-md-8.am-u-end.mb-full-height.mb-home-main
+        .am-g
+
+        // 博客内容导航部分，包括 "已发布","已保存","分类" 三个导航按钮
+        .am-u-md-9: ul.am-nav.am-nav-pills.mb-home-blog-nav
+            li(class="#{navInfo.moduleName=='published'?'mb-active':''}")
+                a(href="/home/blog?module=published") 
+                    span 已发布
+                    span.mb-color-default &nbsp;Published
+            li(class="#{navInfo.moduleName=='saved'?'mb-active':''}") 
+                a(href="/home/blog?module=saved") 
+                    span 已保存
+                    span.mb-color-default &nbsp;Saved
+        .am-u-md-offset-1.am-u-md-2: ul.am-nav.am-nav-pills.mb-home-blog-nav
+            li.am-fr.mb-home-blog-clsdropdown: .am-dropdown(data-am-dropdown)
+                a.mb-color-main.am-dropdown-toggle(data-am-dropdown-toggle)
+                    span.mb-color-main 分类
+                    span.mb-color-default &nbsp;Classes&nbsp;&nbsp;
+                    span.am-icon-caret-down
+                ul.am-dropdown-content.am-nav(style="min-width:80px")
+                    - clsInfo.clsList.forEach(cls=>{
+                        li: a(href="/home/blog?module=#{navInfo.moduleName}&cls=#{cls.clsid}"): =cls.clsname
+                    - })
+        // 指示当前分类的部分
+        .am-u-md-12
+            h3.mb-home-blog-clstitle 
+                span.mb-color-default 当前分类：
+                span.mb-color-main: =clsInfo.crtCls.clsname
+
+        // 博客列表部分
+        ul.am-list.am-u-md-12.am-u-end.mb-home-blog-list
+            li.am-text-center.mb-home-blog-list-hd
+                .am-u-md-7.mb-home-blog-list-title.am-text-left: a(href="#") 
+                    span.mb-color-default &nbsp;标题
+                .am-u-md-2.mb-home-blog-list-time.mb-color-default 创建时间
+                .am-u-md-2.mb-home-blog-list-time.mb-color-default 修改时间
+                .am-u-md-1.am-text-right.mb-color-default 操作
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right.mb-color-default 
+                    a(href="#"): i.am-icon-pencil
+                    span &nbsp;
+                    span &nbsp;
+                    a: i.am-icon-trash-o
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right.mb-color-default 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+            li
+                .am-u-md-7.mb-home-blog-list-title: a(href="#") nodejs和golang的区别
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-2.mb-home-blog-list-time 2017-12-09 8:12:34
+                .am-u-md-1.am-text-right(style="color:#888") 编辑
+        
+        // 分页部分
+        .am-u-md-12
+            ul.am-pagination.am-pagination-default.am-fr(data-am-widget="pagination")
+                li.am-pagination-first: a(href="#") 第一页
+                li.am-pagination-prev: a(href="#") 上一页
+                li: a(href="#") 1
+                li: a(href="#") 2
+                li ......
+                li: a(href="#") 5
+                li.am-pagination-next: a(href="#") 下一页
+                li.am-pagination-last: a(href="#") 最后一页

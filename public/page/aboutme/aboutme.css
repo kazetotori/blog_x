@@ -1,0 +1,24 @@
+/*
+    main-color : #E4304E;
+*/
+
+
+
+#topbar a,
+#topbar i {
+    color: #E4304E
+}
+
+.mb-aboutme-headimg {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #D3D3D3;
+    border-radius: 150px;
+    margin-top: 20px
+}
+
+
+.mb-aboutme-infolist{
+    font-size: 12px;
+    margin-top: 180px;
+}

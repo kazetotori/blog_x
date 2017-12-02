@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="/public/lib/amazeui/dist/css/amazeui.min.css", rel="stylesheet")
+        link(href="/public/lib/mb/mb.common.css", rel="stylesheet")
+        link(href="/public/page/signin/signin.css", rel="stylesheet")
+        link(href="/public/page/signup/signup.css", rel="stylesheet")
+        title 注册 -May Light
+    body.am-g.mb-sign-container
+        .mb-sign-hd
+            ul.am-nav.am-nav-pills.am-fr
+                li: a(href="/findpassword") 忘记密码
+                li: a(href="/signin") 登录
+        main.am-text-center.am-text-center.am-u-md-offset-4.am-u-md-4.mb-full-height(style="background:#FFF")
+            h1#logo.mb-sign-logo(style="margin-top:30px;") X
+            .mb-sign-form
+                .am-input-group
+                    span.am-input-group-label
+                        i.am-icon-user.am-icon-fw
+                    input#username.am-form-field(placeholder="用户名")
+                .am-input-group
+                    span.am-input-group-label
+                        i.am-icon-lock.am-icon-fw
+                    input#password.am-form-field(type="password" placeholder="密码")
+                    input#rePassword.am-form-field(type="password" placeholder="再次输入密码")
+                .am-input-group
+                    span.am-input-group-label
+                        i.am-icon-at.am-icon-fw
+                    input#email.am-form-field(placeholder="邮箱")
+                    #emailAuthContainer.am-form-field(style="padding:0;")
+                        input#emailAuth.am-form-field(style="width:60%;height:37px;border-top:none" placeholder="邮箱验证")
+                        button#btnEmailAuth.am-btn.am-btn-danger(style="width:40%;font-size:12px;height:37px") 发送验证码
+                .am-input-group
+                    span.am-input-group-label
+                        i.am-icon-phone.am-icon-fw
+                    input#phone.am-form-field(placeholder="电话")
+                #successMsg.am-text-center(style="margin-top:20px") &nbsp;
+                .am-text-center(style="margin-top:-60px")
+                    button#btnSignUp.am-btn.am-btn-danger.mb-sign-submit.am-disabled 注册
+
+
+            .am-danger(mb-error-for="#username") 
+            .am-danger(mb-error-for="#password") 
+            .am-danger(mb-error-for="#rePassword")
+            .am-danger(mb-error-for="#email")
+            .am-danger(mb-error-for="#emailAuth")
+            .am-danger(mb-error-for="#phone")
+            
+
+        script(src="/public/lib/jquery/dist/jquery.min.js")
+        script(src="/public/lib/amazeui/dist/js/amazeui.min.js")
+        script(src="/public/page/signup/signup.js")

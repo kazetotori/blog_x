@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="/public/lib/amazeui/dist/css/amazeui.min.css", rel="stylesheet")
+        link(href="/public/lib/mb/mb.common.css", rel="stylesheet")
+        link(href="/public/page/signin/signin.css", rel="stylesheet")
+        title 登录 -May Light
+    body.am-g.mb-full-screen.mb-sign-container
+        header.mb-sign-hd
+            ul.am-nav.am-nav-pills.am-fr
+                li: a(href="/findpassword") 忘记密码
+                li: a(href="/signup") 注册
+                
+        main.am-text-center.am-text-center.am-u-md-offset-4.am-u-md-4.mb-full-height(style="background:#FFF")
+            h1#logo.mb-sign-logo W
+            .mb-sign-form
+                .am-input-group
+                    span.am-input-group-label
+                        i.am-icon-user.am-icon-fw
+                    input#username.am-form-field(placeholder="用户名" value="#{signInfo.username}")
+                .am-input-group
+                    span.am-input-group-label
+                        i.am-icon-lock.am-icon-fw
+                    input#password.am-form-field(type="password" placeholder="密码" value="#{signInfo.fakePassword||''}")
+                #errMsgContainer.am-dropdown.am-fl
+                    #errMsg.am-dropdown-content.am-text-center
+                .am-text-center
+                    button#btnSignIn.am-btn.am-btn-danger.mb-sign-submit 登录
+
+        script(src="/public/lib/jquery/dist/jquery.min.js")
+        script(src="/public/lib/amazeui/dist/js/amazeui.min.js")
+        script(src="/public/page/signin/signin.js")
